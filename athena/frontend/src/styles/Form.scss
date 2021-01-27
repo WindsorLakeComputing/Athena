@@ -1,0 +1,105 @@
+@import "Constants.scss";
+
+.form {
+  margin: 10px;
+
+  .input_container {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 13px;
+
+    input {
+      border: 1px solid #474F59;
+      border-radius: 4px;
+      color: white;
+      font-size: 18px;
+      margin-top: 4px;
+      padding: 6px;
+
+
+      &:focus {
+        outline: 0;
+        border: 1px solid #2C90EE;
+      }
+
+      &.error {
+        border-color: #FDA12A;
+      }
+
+      &:valid {
+        border: 1px solid #474F59;
+      }
+    }
+
+    label {
+      color: $text-color;
+    }
+
+    .dropdown {
+      border: 1px solid #474F59;
+      border-radius: 3px;
+      background-color: #292D33;
+      color: $text-color;
+      padding: 0 12px;
+      svg {
+        color: $text-color;
+      }
+    }
+
+    .menu-item {
+      color: $text-color;
+    }
+
+    .super-cool-select {
+      color: red;
+    }
+
+    .error_text {
+      height: 17px;
+      font-size: 14px;
+      color: #FDA12A;
+      margin-left: 8px;
+    }
+
+    .error_text_placeholder {
+      height: 17px;
+    }
+  }
+
+  .react-select-container {
+    margin-top: 4px;
+    width: 250px;
+
+    .hidden-input {
+      display: none;
+    }
+
+    .error_text{
+      height: 17px;
+      font-size: 14px;
+      color: #FDA12A;
+      margin-left: 8px;
+      font-weight: bold;
+    }
+
+    .error_text_placeholder {
+      height: 17px;
+    }
+  }
+}
+
+input[type="submit"] {
+  margin-top: 13px;
+  width: 190px;
+  color: white;
+}
+
+
+.text_input {
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0);
+  border-width: thin;
+  font-size: 24px;
+}

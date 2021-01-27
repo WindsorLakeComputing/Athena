@@ -1,0 +1,81 @@
+# Full name of the system.
+system-name: Athena
+
+# Shortname or abbreviation.
+short-name: Athena
+
+# System version or release number.
+version: 1
+
+# Operational Environments: production, test, research and development, tactical, deployed, or other.
+environment: development
+
+# Authorization Status: ATO, ATO w/ conditions, IATT, DATO, None.
+authorization: None
+
+# Authorization Termination Date (especially for other environments like NGA)
+authorization-termination-date: N/A
+
+# Assessment Date. Identify the date of last assessment per Continuous ATO.
+review-date: N/A
+
+# Security Re-Assess Interval. Period for re-assessment after updates
+assess-interval: N/A
+
+# authorization boundary diagram. Include URL.
+system-architecture: Athena Architectural Diagram (https://git.aoc-pathfinder.cloud/kessel-run/aoc/athena/athena/blob/develop/ato_docs/Athena%20Living%20Architecture%20Diagram03-11-2019.png)
+
+# confidentiality, Integrity, Availability all H/M/L. Classification: Secret/TS
+# Mission Criticality Guidance can be found on wiki. Choices are 1, 2, 3.
+# Personally Identifiable Information: Y/N. Assessment team can help data types
+categorization:
+  confidentiality:
+  integrity:
+  availability:
+  classification-level: FOUO
+  pii: N
+  mission-criticality: N
+  data-types:
+    - F-35 Maintainer Information
+
+
+deployment-sites:
+  - TBD
+
+programming-languages:
+  - Kotlin
+  - TypeScript
+
+dependencies:
+  service-tiles:
+  - N/A
+  databases:
+  - N/A
+  external-systems:
+  - N/A
+
+role-identification:
+  authorizing-official:
+    name:
+    title:
+    org:
+    email:
+    phone:
+  system-owner:
+    name: Lt. Col. Aaron Capizzi
+    title: Program Manager (MadHatter)
+    org: HBH
+    email: acapizzi@kr.af.mil
+    phone: 812-239-2427
+  system-security-officer:
+    name: Andrew Altizer
+    title: System Security Officer
+    org: AFLCMC
+    email: andrew.altizer@us.af.mil
+    phone: 781-225-9049
+  product-manager:
+    name: Capt Christian Martinotti
+    title: Product Manager
+    org: HBH
+    email: cmartinotti@kr.af.mil
+    phone: 201-835-7012

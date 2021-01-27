@@ -1,0 +1,54 @@
+.table-list {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 32px;
+
+  h4 {
+    text-align: left;
+  }
+
+  table {
+    border: none;
+    border-collapse: collapse;
+    text-align: left;
+
+    thead {
+      th {
+        font-weight: normal;
+        font-size: 16px;
+        padding-bottom: 1rem;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #373D45;
+        transition-property: background-color;
+        transition-duration: .1s;
+        transition-timing-function: ease-in-out;
+
+        td, th {
+          padding: 1rem 1.5rem 1rem 0;
+          border: none;
+          font-weight: normal;
+          font-size: 14px;
+        }
+
+        tr:not(:first-child) {
+          td, th {
+            border-color: white;
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+          }
+        }
+      }
+
+      tr:hover {
+        background-color: #373D45;
+      }
+    }
+  }
+}
+
+

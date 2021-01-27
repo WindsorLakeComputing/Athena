@@ -1,0 +1,8 @@
+<templateSet group="Objective-C Custom">
+  <template name="initBody" value="if(self = [super $INIT$]) {&#10;    $END$&#10;}&#10;return self;" description="basic init body" toReformat="true" toShortenFQNames="true">
+    <variable name="INIT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>

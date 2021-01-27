@@ -1,0 +1,30 @@
+@import "./Constants.scss";
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $text-color;
+  min-height: 100vh;
+  min-width: 1200px;
+  background-color: #292D33;
+
+  .upload-status {
+    position: absolute;
+  }
+}
+
+.error-message {
+  padding: 25px;
+  font-size: 18px;
+
+  img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+.menu-container {
+  background-color: #393F47;
+}

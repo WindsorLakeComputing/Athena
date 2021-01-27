@@ -1,0 +1,36 @@
+.gradle
+build/*
+!build/generated-snippets/*
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+.DS_Store
+
+/src/main/resources/public
+/src/main/resources/static
+
+frontend/cypress/videos
+
+/node_modules/

@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# This hook is called with the following parameters:
+#
+# $1 -- Name of the remote to which the push is being done
+# $2 -- URL to which the push is being done
+#
+# If pushing without using a named remote those arguments will be equal.
+#
+# Information about the commits which are being pushed is supplied as lines to
+# the standard input in the form:
+#
+#   <local ref> <local sha1> <remote ref> <remote sha1>
+
+
+set -e
+
+while read local_ref local_sha remote_ref remote_sha
+do
+	if [[ "$remote_ref" == "refs/heads/develop" || "$remote_ref" == "refs/heads/master" ]]; then
+		echo "🐩  Hello! You are pushing to develop or master. Let's run our tests now."
+		./gradlew test
+		pushd frontend
+		yarn lint
+		yarn test
+		echo "🐩  All tests have passed! 🔥"
+	fi
+done

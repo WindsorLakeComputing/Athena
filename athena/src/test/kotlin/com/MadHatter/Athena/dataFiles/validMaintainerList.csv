@@ -1,0 +1,8 @@
+lastName,firstName,employeeNumber,section,courseCode,assignedShift,firstPreference,secondPreference,thirdPreference,level,rank
+ANNESE,TIMOTHY J,5971,Production,002052,S,D,S,M,3,Sgt
+TEST, BILL,5972,Weapons,29086,S,D,S,M,3,Sgt
+JONES,JAMES,5973,APG,002052,S,D,S,M,3,Sgt
+JONES,JAMES,5973,APG,002260,S,D,S,M,3,Sgt
+JONES,JAMES,5973,APG,002277,S,D,S,M,3,Sgt
+JONES,JAMES,5973,APG,002431,S,D,S,M,3,Sgt
+ANNESE,HI J,5974,Production,002052,S,D,S,M,3,Sgt

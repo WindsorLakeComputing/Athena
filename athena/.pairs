@@ -1,0 +1,12 @@
+pairs:
+  lm: Laura Mcelhaney; lmcelhaney
+  pf: Patrick Fogarty; pfogarty
+  td: Teagan Durtschi; tdurtschi
+  dt: Dan Toomey;
+  jm: James McMahon; jmcmahon
+  am: Amanda Munoz; amunoz
+email:
+  prefix: pair
+  domain: pivotal.io
+  no_solo_prefix: true
+global: false

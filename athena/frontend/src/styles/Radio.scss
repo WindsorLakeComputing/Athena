@@ -1,0 +1,28 @@
+.radio-options {
+  display: flex;
+
+  .radio-button {
+    align-content: center;
+    padding-right: 2rem;
+
+    input {
+      margin: -5px .5rem 0rem;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  .red-x-title {
+    width: 80%;
+    text-align: left;
+  }
+}
+
+.red-x-options {
+  border: none;
+  padding: 0;
+}

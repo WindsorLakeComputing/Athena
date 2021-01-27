@@ -1,0 +1,131 @@
+.maintainer {
+  cursor: pointer;
+
+  .standby-add-button {
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    height: 48px;
+    width: 160px;
+    border-radius: 6px;
+    font-size: 18px;
+  }
+
+  .trash-icon{
+    display:none;
+  }
+
+  .standby-delete-button{
+    background-color: #B4BECC;
+    color: #303439;
+    border-radius: 6px;
+    text-align: center;
+    height: 48px;
+    width: 160px;
+    font-size: 18px;
+  }
+}
+
+.maintainer:hover {
+  .standby-add-button {
+    border-color: white;
+    color: white;
+  }
+
+  .standby-delete-button{
+    background-color: #dce7f4;
+  }
+
+  .trash-icon{
+    display: initial;
+    vertical-align: bottom;
+    position: absolute;
+    left: 18px;
+    top: 18px;
+  }
+}
+
+.maintainer-list {
+  tbody {
+    td.weekend-standby-cell {
+      padding: 0;
+      position:relative;
+      border-left: 1px solid #373D45;
+    }
+
+    td.weekly-view-absence-cell {
+      border-left: 1px solid #373D45;
+      padding: 0;
+    }
+
+    tr{
+      .busy {
+        background-color: #B4BECC;
+        color: #303439;
+        border-radius: 6px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.absence-reason {
+  font-size:18px;
+}
+
+.absence-hours {
+  margin-top: 8px;
+  font-size: 12px;
+  word-break: keep-all;
+}
+
+.unsorted {
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+
+    &::after {
+      content: url("../resources/images/sortedtriangleup-white.svg");
+      display: inline-block;
+      margin-left: 6px;
+    }
+  }
+
+  &::after {
+    content: url("../resources/images/sortedtriangleup.svg");
+    display: inline-block;
+    margin-left: 6px;
+  }
+}
+
+.sorted {
+  cursor: pointer;
+  color: white;
+
+
+  &::after {
+    content: url("../resources/images/sortedtriangleup-white.svg");
+    display: inline-block;
+    margin-left: 6px;
+  }
+}
+
+.sorted-reverse {
+  cursor: pointer;
+  color: white;
+
+  &::after {
+    content: url("../resources/images/sortedtriangleup-white.svg");
+    transform: rotate(180deg) translateY(-2px);
+    display: inline-block;
+    margin-left: 6px;
+  }
+}
+
+.maintainer_list_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

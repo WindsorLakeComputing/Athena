@@ -1,0 +1,133 @@
+resource_types:
+
+- name: maven-resource
+  type: docker-image
+  source:
+    repository: nulldriver/maven-resource
+    tag: latest
+
+resources:
+
+- name: src-develop
+  type: git
+  source:
+    uri: git@git.aoc-pathfinder.cloud:kessel-run/aoc/athena/athena.git
+    branch: develop
+    private_key: ((aoc_gitlab.private_key))
+
+- name: src-release
+  type: git
+  source:
+    uri: git@git.aoc-pathfinder.cloud:kessel-run/aoc/athena/athena.git
+    branch: release
+    private_key: ((aoc_gitlab.private_key))
+
+- name: pipeline-repo
+  type: git
+  source:
+    uri: git@git.aoc-pathfinder.cloud:kessel-run/aoc/athena/pipeline-integration.git
+    branch: master
+    private_key: ((aoc_gitlab.private_key))
+
+- name: acceptance
+  type: cf
+  source:
+    api: https://api.sys.devstar.aoc-pathfinder.cloud
+    username: ((aoc_pcf.username))
+    password: ((aoc_pcf.password))
+    organization: athena
+    space: acceptance
+
+- name: snapshot
+  type: maven-resource
+  source:
+    url: https://repo.aoc-pathfinder.cloud/repository/athena-releases/
+    snapshot_url: https://repo.aoc-pathfinder.cloud/repository/athena-snapshots/
+    artifact: mil.af.kesselrun:athena:jar
+    username: ((aoc_ad_service.username))
+    password: ((aoc_ad_service.password))
+
+- name: version
+  type: semver
+  source:
+    driver: git
+    uri: git@git.aoc-pathfinder.cloud:dev-enablement/product-versions.git
+    branch: master
+    file: example-projects/titan/version
+    private_key: ((aoc_gitlab.private_key))
+
+jobs:
+
+- name: lint-trap
+  plan:
+  - aggregate:
+    - get: src-repo
+      resource: src-develop
+      trigger: true
+    - get: pipeline-repo
+  - task: lint
+    file: pipeline-repo/tasks/lint.yml
+
+- name: unit-tests
+  plan:
+    - aggregate:
+        - get: src-repo
+          resource: src-develop
+          trigger: true
+        - get: pipeline-repo
+    - task: java unit tests
+      file: pipeline-repo/tasks/unit-tests.yml
+
+- name: build-snapshot
+  plan:
+  - aggregate:
+    - get: src-repo
+      resource: src-develop
+      trigger: true
+      passed: [lint-trap, unit-tests]
+    - get: pipeline-repo
+    - get: version
+  - task: build snapshot
+    file: pipeline-repo/tasks/build-snapshot.yml
+    params:
+      NEXUS_URL: https://repo.aoc-pathfinder.cloud
+  - put: snapshot
+    params:
+      file: build-output/Athena-*.jar
+      version_file: build-output/version
+
+- name: feature-tests
+  plan:
+    - aggregate:
+        - get: src-repo
+          resource: src-develop
+          trigger: true
+          passed: [build-snapshot]
+        - get: snapshot
+        - get: pipeline-repo
+    - task: cypress feature tests
+      file: pipeline-repo/tasks/feature-tests.yml
+
+- name: deploy-acceptance
+  plan:
+  - aggregate:
+    - get: src-develop
+      trigger: true
+      passed: [feature-tests]
+    - get: snapshot
+  - put: acceptance
+    params:
+      path: snapshot/*.jar
+      manifest: src-develop/cf/manifest.yml
+      vars_files:
+        - /tmp/build/put/src-develop/cf/variables/acceptance.yml
+
+- name: push-release-pipeline
+  plan:
+  - get: src-develop
+    trigger: true
+    passed: [deploy-acceptance]
+  - put: src-release
+    params:
+      merge: true
+      repository: src-develop

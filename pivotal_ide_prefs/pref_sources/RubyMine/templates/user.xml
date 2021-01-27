@@ -1,0 +1,7 @@
+<templateSet group="user">
+  <template name="pl" value="puts [__FILE__,__LINE__].join &quot;:&quot;" description="puts file name and line number" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="RUBY" value="true" />
+    </context>
+  </template>
+</templateSet>

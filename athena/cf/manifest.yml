@@ -1,0 +1,19 @@
+---
+applications:
+  - name: ((athena-name))
+    memory: 1G
+    instances: 1
+    services:
+     - athena-sso
+     - athena-db
+     - minerva-msg
+
+    env:
+      SSO_IDENTITY_PROVIDERS: adfs
+      SSO_SCOPES: openid, madhatter.entity.read, madhatter.athena.entity.admin, madhatter.athena.entity.create, madhatter.athena.entity.edit, madhatter.athena.entity.delete
+      SSO_RESOURCES: |
+        madhatter.athena.entity.admin: Athena ADMIN
+        madhatter.athena.entity.create: Athena CREATE
+        madhatter.athena.entity.edit: Athena EDIT
+        madhatter.athena.entity.delete: Athena DELETE
+      SSO_AUTO_APPROVED_SCOPES: openid, madhatter.entity.read, madhatter.athena.entity.admin, madhatter.athena.entity.create, madhatter.athena.entity.edit, madhatter.athena.entity.delete

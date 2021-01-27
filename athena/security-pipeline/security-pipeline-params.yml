@@ -1,0 +1,89 @@
+# Welcome to the Security Pipeline!
+#
+# For an in-depth overview of our security pipeline, feel free to view this doc:
+# https://docs.google.com/document/d/1R_ojs_wzeZSlR-c4J7X2XVSOfY9MeuVTI1dsbrEutcQ/edit#
+#
+# However, you can skip reading all this for now and jump right into onboarding.
+#
+# Download and fill out this yml file. Once you've finished, please send this file to us in #security-general on Slack
+#
+# For reference, all the onboarded teams' params files are located here:
+# https://git.aoc-pathfinder.cloud/Security-Engineering/security-pipeline/tree/release/config
+#
+#
+# Required: This is the git repository of the application.
+# Example: git@git.aoc-pathfinder.cloud:Security-Engineering/sample-project.git
+application_uri: git@git.aoc-pathfinder.cloud:kessel-run/aoc/athena/athena.git
+
+# Required: This is the git branch of the application where the security pipeline will scan.
+# The security scan results will be assessed by the C-ATO, so please use your release branch.
+# Example: master
+application_branch: develop
+
+# Required: Application ThreadFix ID provided by **KREL TOOLS & SERVICES**.
+# Example: 30
+threadfix_application_id: 56
+
+# Required: This the OWASP dependency check project name. Should be in the format <application_name>
+# Example: comlink
+owasp_project_name: athena
+
+# Required: SonarQube project name to be used for the application. Should be in the format <application_name>
+# Example: comlink
+sonar_project_name: athena
+
+# Required: SonarQube project key to be used for the application. Should be in the format <team_name>-<application_name>
+# Example: rebel-alliance-comlink
+sonar_project_key: athena-athena-app
+
+# Required: Comma-separated paths to directories that contain source files.
+# Default: ""
+# Example: "api/src/main/java,ui"
+sonar_sources: "src/main/kotlin/com/MadHatter/Athena,frontend/src"
+
+# Optional: Comma-separated list of file path patterns to be excluded from analysis.
+# Default: ""
+# Example: "ui/**/*.test.js"
+sonar_exclusions: "frontend/src/__tests__/**"
+
+# Optional: Comma separated list of file path patterns to be excluded from duplication detection.
+# Default: ""
+# Example: "api/src/**/test/**/*.java"
+sonar_coverage_exclusions: ""
+
+# Optional: Comma separated list of file path patterns to be excluded from coverage calculations.
+# Default: ""
+sonar_cpd_exclusions: ""
+
+# Optional: Comma separated list of file path patterns to be included for Java binaries to be scanned by Sonarqube.
+# Default: ""
+# Example: "build/classes/"
+sonar_java_binaries: ""
+
+# Optional: List of files to include for Fortify scanning. Use " " to separate multiple directories/files
+# Default: ""
+# Example: backend/src/**/*.java backend/src/**/*.js"
+fortify_include: "src/main/kotlin/com/MadHatter/Athena/**/*.kt frontend/src/**/*.tsx"
+
+# Optional: List of files to exclude for Fortify scanning. Use ":" to separate multiple directories/files
+# Default: ""
+# Example: "backend/src/**/Album.java:backend/src/**/AlbumController.java"
+fortify_exclude: ""
+
+# Optional: Space separated list of .class files to be included for Fortify scanning.
+# Use this to translate bytecode in your project, typically for Kotlin file scanning.
+# Default: ""
+# Example: "src/**/*.class"
+fortify_bytecode_include: "build/classes/kotlin/main/com/MadHatter/Athena/**/*.class"
+
+# Optional: Space separated list of .jar files to be included for Fortify scanning.
+# Use this to translate jars in your project, typically for Java dependency scanning.
+# Default: ""
+# Example: "lib/**/*.jar"
+fortify_jars_include: ""
+
+# Optional: Gradle task to be excluded from build
+# Currently, this parameter only allows excluding of a single task.
+# Default: ""
+# Example: "yarn_workspace_react-app_run_build"
+gradle_task_exclude: ""

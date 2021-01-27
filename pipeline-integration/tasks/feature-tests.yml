@@ -1,0 +1,20 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: registry.aoc-pathfinder.cloud/dev-enablement/java-node
+    tag: latest
+    username: ((aoc_ad_service.username))
+    password: ((aoc_ad_service.password))
+
+inputs:
+  - name: src-repo
+  - name: snapshot
+  - name: pipeline-repo
+outputs:
+  - name: artifacts
+
+run:
+  path: pipeline-repo/scripts/feature-tests.sh

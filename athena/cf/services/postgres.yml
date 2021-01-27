@@ -1,0 +1,7 @@
+command: create-service
+service: postgresql-10-odb
+plan: general-monitor
+service_instance: athena-db
+timeout: 600
+wait_for_service: true
+configuration: '{"db_name": "athena", "db_username": "athena", "owner_name": "athena", "owner_email": "athena@kr.af.mil", "ext_uuid-ossp": true}'

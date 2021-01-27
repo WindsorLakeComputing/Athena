@@ -1,0 +1,53 @@
+.maintainer-details {
+  width: 80%;
+
+  .maintainer-attributes {
+    font-size: 14px;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    FONT-WEIGHT: 500;
+  }
+
+}
+
+.maintainer-detail-group {
+  padding-top: 2rem;
+}
+
+.create_absence {
+  color: #F2F7FC;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #6D757f;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+#absence-list {
+  th {
+    width: 15%
+  }
+}
+
+.certification_table_header {
+  border-bottom: 1px solid grey;
+}
+
+#certification-list {
+  tr {
+    border-bottom: transparent;
+  }
+
+  tr:hover{
+    background-color: transparent;
+  }
+
+  .certification_detail{
+    td{
+      padding: 0 5rem 0 0;
+    }
+
+    .checkbox_container{
+      padding-left: 1rem;
+    }
+  }
+}

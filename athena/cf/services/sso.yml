@@ -1,0 +1,6 @@
+command: create-service
+service: p-identity
+plan: adfs
+service_instance: athena-sso
+timeout: 300
+wait_for_service: true

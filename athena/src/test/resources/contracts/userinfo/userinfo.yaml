@@ -1,0 +1,30 @@
+description: |
+  Represents a successful scenario of asking for a maintainer's info
+  ```
+  given:
+      unique identifier for a maintainer
+  when:
+      we can locate the maintainer in SSO
+  then:
+      we accept the request and the sso user info + AMU + ROLE
+  ```
+request:
+  method: GET
+  url: /userinfo
+
+  headers:
+    Authorization: "Bearer SUPERGREATTOKEN" #we might need to be more realistic with our bearer
+
+response:
+  status: 200
+  body:
+    user_id: "0dccc8e2-ac1c-4031-9008-7d745f58b3a2"
+    user_name: "FUser"
+    name: "Fake MadHatterUser unknown.org"
+    given_name: "FUser"
+    family_name: "unknown.org"
+    email: "FUser@unknown.org"
+    email_verified: false
+    previous_logon_time: 1556051070104
+    sub: "0dccc8e2-ac1c-4031-9008-7d745f58b3a2"
+    amu: "BOLT"

@@ -1,0 +1,6 @@
+src_repo: git@git.aoc-pathfinder.cloud:kessel-run/aoc/athena/athena.git
+pipeline_repo: git@git.aoc-pathfinder.cloud:kessel-run/aoc/athena/pipeline-integration.git
+nexus_url: https://repo.aoc-pathfinder.cloud
+versions_repo: git@git.aoc-pathfinder.cloud:dev-enablement/product-versions.git
+version_path: example-projects/titan/version
+cf_api_endpoint: https://api.sys.devstar.aoc-pathfinder.cloud

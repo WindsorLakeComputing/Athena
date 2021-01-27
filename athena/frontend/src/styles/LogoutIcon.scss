@@ -1,0 +1,30 @@
+.dropdown-menu {
+  position: absolute;
+  width: 16.8125rem;
+  box-shadow: 0 6px 10px 0 #000000;
+  background-color: #393f47;
+  right: 2.5rem;
+  top: 2.5rem;
+  z-index: 5;
+
+  .dropdown-menu__item {
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding: 0.9375rem 0;
+
+    &:hover {
+      background-color: #292d33;
+    }
+
+    button {
+      background-color: inherit;
+      width:100%;
+      font-size:18px;
+      border: none;
+      color: #FFFFFF;
+    }
+  }
+}

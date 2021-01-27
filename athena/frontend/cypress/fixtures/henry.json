@@ -1,0 +1,27 @@
+{
+  "firstName": "Henry",
+  "lastName": "Arnold",
+  "employeeId": "5971",
+  "certificates": [{"name": "X", "id": 1}, {"name": "Run", "id": 4}, {"name": "Bore", "id": 7}],
+  "firstShiftPreference": {"name": "D", "id": 1},
+  "secondShiftPreference": {"name": "S", "id": 2},
+  "thirdShiftPreference": {"name": "M", "id": 3},
+  "level": "3",
+  "rank": "TSgt",
+  "section": {"name": "APG", "id": 3},
+  "shift": {"name": "S", "id": 2},
+  "absences":
+  [
+    {
+      "startDate": "2019-05-14",
+      "endDate": "2019-05-14",
+      "reason": "Rodeo",
+      "location": "El Paso",
+      "maintainer": null,
+      "id": 1,
+      "hours": "2100-2400"
+    }
+  ],
+  "standbys": [],
+  "id": 9
+}

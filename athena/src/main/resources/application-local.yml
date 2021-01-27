@@ -1,0 +1,29 @@
+logging:
+  level:
+    org:
+      springframework:
+        web: info
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: "https://adfs.login.sys.devstar.aoc-pathfinder.cloud/userinfo"
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    generate-ddl: true
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/athena
+    username: athena
+    password: password
+  flyway:
+    sql-migration-prefix: V
+    sql-migration-separator: __
+    sql-migration-suffixes: .sql
+    validate-on-migrate: true
+    baseline-on-migrate: true

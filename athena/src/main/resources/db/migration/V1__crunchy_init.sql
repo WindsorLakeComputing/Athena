@@ -1,0 +1,3 @@
+-- crunchy creates some tables for us when we spin up a new database
+--
+-- tl;dr, this file is intentionally left blank

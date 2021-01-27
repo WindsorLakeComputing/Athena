@@ -1,0 +1,14 @@
+description: |
+  Represents a scenario of asking for a maintainer's info without sending an auth token
+  ```
+  when:
+      a request is made with no auth token
+  then:
+      we reject the request
+  ```
+request:
+  method: GET
+  url: /userinfo
+
+response:
+  status: 400

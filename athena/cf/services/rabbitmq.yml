@@ -1,0 +1,6 @@
+command: create-service
+service: p-rabbitmq
+plan: standard
+service_instance: minerva-msg
+timeout: 300
+wait_for_service: true

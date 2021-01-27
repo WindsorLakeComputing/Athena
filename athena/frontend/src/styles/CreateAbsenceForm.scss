@@ -1,0 +1,59 @@
+.create_absence_form{
+  display: flex;
+  flex-direction: column;
+
+  .input_form {
+    display: flex;
+    flex-direction: row;
+
+      input.valid {
+        border: none;
+      }
+
+      input.invalid {
+        border: 1px solid red;
+        border-style: inset;
+      }
+  }
+
+  .error_row {
+    display: flex;
+    flex-direction: row;
+    height: 16px;
+
+    .error_message {
+      width: 147px;
+      font-size: 12px;
+      padding-top: .5rem;
+      padding-right: 30px;
+    }
+  }
+
+  .date_range_picker_error{
+    width:325px;
+    padding-right: 15px;
+  }
+
+  .absence_input {
+    height: 48px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 14px;
+    color: #484848;
+    outline: none;
+    border-radius: 2px;
+    border: none;
+  }
+
+  #absence_hours {
+    margin-left: 10px;
+  }
+
+  .DateRangePickerInput{
+    width:325px;
+  }
+  .DateInput {
+    padding-right: 15px;
+  }
+}

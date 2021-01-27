@@ -1,0 +1,32 @@
+security:
+  oauth2:
+    client:
+      access-token-uri: ${vcap.services.athena-sso.credentials.auth_domain}/oauth/token
+      clientId: ${vcap.services.athena-sso.credentials.client_id}
+      clientSecret: ${vcap.services.athena-sso.credentials.client_secret}
+      user-authorization-uri: ${vcap.services.athena-sso.credentials.auth_domain}/oauth/authorize
+
+logging:
+  level:
+    org:
+      springframework:
+        web: info
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    generate-ddl: true
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+  datasource:
+    url: ${vcap.services.athena-db.credentials.jdbc_uri}
+    username: ${vcap.services.athena-db.credentials.username}
+    password: ${vcap.services.athena-db.credentials.password}
+  flyway:
+    sql-migration-prefix: V
+    sql-migration-separator: __
+    sql-migration-suffixes: .sql
+    validate-on-migrate: true
+    baseline-on-migrate: true

@@ -1,0 +1,5 @@
+source "https://rubygems.org"
+
+gem "ide_prefs", path: "../ide_prefs", require: false
+
+gemspec

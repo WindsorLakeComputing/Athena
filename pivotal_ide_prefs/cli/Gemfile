@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+gem "rake"
+gem "cucumber"
+gem "rspec"
+gem "persistence", path: "../persistence"
+gem "ide_prefs", path: "../ide_prefs"
+gem "logging", path: "../logging"

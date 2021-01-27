@@ -1,0 +1,19 @@
+
+= User Info API Guide
+:toc: left
+
+== /userinfo
+
+=== Request Types
+include::{snippets}/userinfo/http-request.adoc[]
+include::{snippets}/userinfo/httpie-request.adoc[]
+include::{snippets}/userinfo/curl-request.adoc[]
+
+=== Response
+include::{snippets}/userinfo/http-response.adoc[]
+
+==== Response Body
+include::{snippets}/userinfo/response-body.adoc[]
+
+==== Response Fields
+include::{snippets}/userinfo/response-fields.adoc[]

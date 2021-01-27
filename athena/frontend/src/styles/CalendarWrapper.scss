@@ -1,0 +1,84 @@
+#calendar-wrapper {
+  margin-top: 32px;
+}
+
+.CalendarMonth {
+  background: transparent;
+}
+
+.CalendarMonth_caption {
+  color: white;
+}
+
+.CalendarMonthGrid {
+  background: transparent;
+}
+
+.CalendarDay {
+  border: none;
+  background: #202428;
+  color: white;
+}
+
+.CalendarDay:hover {
+  color: #ffffff;
+  background: #474f59;
+  border: none;
+  border-radius: 3px;
+  transition-duration: .1s;
+}
+
+.CalendarDay__selected {
+  background: #2c90ee;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.CalendarDay__selected:hover {
+  color: #ffffff;
+  background: #47a6ff;
+}
+
+.CalendarDay__selected_span {
+  color: white;
+  background: #00a699;
+}
+
+.CalendarDay__outside {
+  color: dimgrey;
+}
+
+.DayPicker_transitionContainer {
+  background: transparent;
+  color: white;
+}
+
+.DayPickerNavigation_button {
+  visibility: hidden;
+}
+
+.DayPicker__horizontal {
+  background: #202428;
+  border-radius: 8px;
+}
+
+.DayPicker_weekHeader {
+  color: #b4becc;
+}
+
+.DateRangePicker_picker {
+  background-color: transparent;
+}
+
+#week-view-button{
+  margin: 1rem;
+}
+
+.DateRangePickerInput__withBorder {
+  border: 1px solid white;
+}
+
+.DateInput_input {
+  font-weight: 400;
+  font-size: 14px;
+}

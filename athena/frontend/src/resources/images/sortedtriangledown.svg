@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Sorted Column Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 3.125 5 8.125 10 3.125"></polygon>
+    </defs>
+    <g id="Master" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1b.4-sort-weekend-copy" transform="translate(-1379.000000, -334.000000)">
+            <g id="Table/SortableColumn-Copy" transform="translate(1300.000000, 320.000000)">
+                <g id="Icons/arrows/triangleDown" transform="translate(79.000000, 11.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Shape" fill="#B4BECC" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="Utilities/Colors/gray/F" mask="url(#mask-2)" fill="#F2F7FC" fill-rule="evenodd">
+                        <g transform="translate(-15.000000, -17.500000)" id="Rectangle-6">
+                            <rect transform="translate(20.312500, 20.820312) rotate(-360.000000) translate(-20.312500, -20.820312) " x="0" y="-7.10542736e-15" width="40.625" height="41.640625"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

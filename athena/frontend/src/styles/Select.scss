@@ -1,0 +1,68 @@
+@import "./Constants.scss";
+
+div.react-select__control {
+  background-color: #292D33;
+  border-radius: 3px;
+  border: 1px solid #474F59;
+
+  &:hover {
+    background-color: #292D33;
+    border-radius: 3px;
+    border: 1px solid #474F59;
+  }
+}
+
+
+div.react-select__placeholder{
+  color: $text-color;
+  font-size: 14px;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;;
+  font-weight: 700;
+}
+
+div.react-select__single-value {
+  color: $text-color;
+  font-size: 14px;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;;
+  font-weight: 700;
+}
+
+div.react-select__menu {
+  border-radius: 0;
+  margin-top: 1px;
+  background-color: #393f47;
+  padding: 8px 0;
+  text-align:left;
+  z-index: 10000;
+}
+
+div.react-select__option {
+  padding: 16px;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+div.react-select__option{
+  &:hover{
+    background-color: #474f59;
+  }
+  &:focus {
+    background-color: black;
+  }
+}
+
+div.react-select__option--is-focused  {
+  background-color: #474f59;
+}
+
+div.react-select__option--is-selected  {
+  background-color: #2270BA;
+}
+div.react-select__option--is-selected:hover  {
+  background-color: #47a6ff;
+}
+
+.react-select-error .react-select__control{
+  border-color: #FDA12A;
+}

@@ -1,0 +1,19 @@
+{
+    "defaultSeverity": "error",
+    "jsRules": {
+        "semicolon": [true, "never"],
+        "trailing-comma": [true, {"multiline": "never", "singleline": "never"}]
+    },
+    "rules": {
+        "semicolon": [true, "never"],
+        "interface-name": [true, "never-prefix"],
+        "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
+        "object-literal-sort-keys": false,
+        "prefer-template": true
+    },
+    "rulesDirectory": [],
+    "extends": [
+        "tslint:recommended",
+        "tslint-no-unused-expression-chai"
+    ]
+}
